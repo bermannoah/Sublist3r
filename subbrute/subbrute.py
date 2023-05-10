@@ -59,7 +59,7 @@ class verify_nameservers(multiprocessing.Process):
         self.most_popular_website = "www.google.com"
         #We shouldn't need the backup_resolver, but we we can use them if need be.
         #We must have a resolver,  and localhost can work in some environments.
-        self.backup_resolver = resolver.nameservers + ['127.0.0.1', '8.8.8.8', '8.8.4.4']
+        self.backup_resolver = resolver.nameservers + ['8.8.8.8', '8.8.4.4']
         #Ideally a nameserver should respond in less than 1 sec.
         resolver.timeout = 1
         resolver.lifetime = 1
